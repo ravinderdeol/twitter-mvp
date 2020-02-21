@@ -3,10 +3,8 @@
   <head>
     <title>Twitter MVP</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" %>
+    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -36,15 +34,17 @@
 
         <div id="navbarExample" class="navbar-menu">
           <div class="navbar-end">
-            <div class="field is-grouped">
-              <p class="control">
-                <%= link_to 'New Tweet', new_tweet_path, class: "button is-info is-inverted"  %>
-              </p>
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                <p class="control">
+                  <%= link_to 'New Tweet', new_tweet_path, class: "button is-info is-inverted"  %>
+                  </p>
               <p class="control">Sign Up</p>
             </div>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
 
     <%= yield %>
   </body>
